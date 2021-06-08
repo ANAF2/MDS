@@ -36,8 +36,13 @@
 
     <form action="includes/signup-inc.php" method="post">
         <div class="form-group ">
-            <label>Name</label>
-            <input type="text" name="name" class="form-control" placeholder="John Doe" required>
+            <label>Last Name</label>
+            <input type="text" name="lastName" class="form-control" placeholder="Doe" required>
+        </div>
+
+        <div class="form-group ">
+            <label>First Name</label>
+            <input type="text" name="firstName" class="form-control" placeholder="John" required>
         </div>
 
         <div class="form-group ">

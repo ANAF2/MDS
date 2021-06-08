@@ -17,13 +17,6 @@
 ?>
 	<h2 style="text-align:center">Sign up for and start your resume:</h2>
 
-	<?php
-		if(isset($_GET["error"]) and $_GET["error"] === "nocode"){
-			echo'<i style="color:red; text-align:center">This order dose not exist</i>';
-		}
-
-	?>
-
 	<div class="d-flex justify-content-center ">
 		<a class="btn btn-primary" href="login.php">Login</a>
 		<div class="divider"></div>

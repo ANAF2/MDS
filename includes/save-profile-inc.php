@@ -5,12 +5,13 @@ session_start();
 $userName = $_POST["username"];
 $email = $_POST["email"];
 $phone = $_POST["phone"];
-$name = $_POST["name"];
+$lastName = $_POST["lastName"];
+$firstName = $_POST["firstName"];
 $userid = $_SESSION["userid"];
 
 //echo "<script>console.log(\"" . $name . "\")</script>";
 
-$sql = "UPDATE user SET username = ?, name = ?, email = ?, phone_number = ? WHERE userId = ?;";
+$sql = "UPDATE user SET username = ?, firstname = ?, lastname = ?, email = ?, phone_number = ? WHERE userId = ?;";
 $stmt = mysqli_stmt_init($conn);
 
 if(!mysqli_stmt_prepare($stmt, $sql)){
@@ -18,7 +19,7 @@ if(!mysqli_stmt_prepare($stmt, $sql)){
     exit();
 }
 
-mysqli_stmt_bind_param($stmt, "sssii", $userName, $name, $email, $phone, $userid);
+mysqli_stmt_bind_param($stmt, "sssssi", $userName, $firstName, $lastName, $email, $phone, $userid);
 mysqli_stmt_execute($stmt); 
 
 mysqli_stmt_close($stmt);

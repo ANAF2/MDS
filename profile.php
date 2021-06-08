@@ -22,8 +22,13 @@
 
         <form action="includes/save-profile-inc.php" method="POST">
         <div class="form-group ">
-            <label>Name</label>
-            <input type="text" name="name" class="form-control" placeholder="John Doe" required value = <?php echo $row["name"]; ?>>
+            <label>Last Name</label>
+            <input type="text" name="lastName" class="form-control" placeholder="Doe" required value = <?php echo $row["lastname"]; ?>>
+        </div>
+
+        <div class="form-group ">
+            <label>First Name</label>
+            <input type="text" name="firstName" class="form-control" placeholder="John" required value = <?php echo $row["firstname"]; ?>>
         </div>
 
         <div class="form-group ">
@@ -33,7 +38,7 @@
 
         <div class="form-group ">
             <label>Phone number</label>
-            <input type="tel" name="phone" class="form-control" pattern="[0-9]{10}" placeholder="0123456789" required value = <?php echo '0' . $row["phone_number"]; ?>>
+            <input type="tel" name="phone" class="form-control" pattern="[0-9]{10}" placeholder="0123456789" required value = <?php echo $row["phone_number"]; ?>>
         </div>
 
         <div class="form-group ">

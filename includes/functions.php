@@ -27,7 +27,7 @@ function userExists($conn, $username, $email){
     mysqli_stmt_close($stmt);
 }
 
-function userCreate($conn, $name, $email, $phone, $username, $password, $repeatPassword){
+function userCreate($conn, $firstName, $lastName, $email, $phone, $username, $password, $repeatPassword){
 
    /* if(!preg_match('/^[a-zA-Z0-9]*$/'), $username){
         header("location: ../signup.php?error=invaliduser");
@@ -49,7 +49,7 @@ function userCreate($conn, $name, $email, $phone, $username, $password, $repeatP
 
     $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO user (username, password, name, email, phone_number) VALUES (?, ?, ?, ?, ?);";
+    $sql = "INSERT INTO user (username, password, firstname, lastname, email, phone_number) VALUES (?, ?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
    
     if(!mysqli_stmt_prepare($stmt, $sql)){
@@ -57,7 +57,7 @@ function userCreate($conn, $name, $email, $phone, $username, $password, $repeatP
         exit();
     }
 
-    mysqli_stmt_bind_param($stmt, "ssssi", $username, $hashedPwd, $name, $email, $phone);
+    mysqli_stmt_bind_param($stmt, "sssssi", $username, $hashedPwd, $firstName, $lastName, $email, $phone);
     mysqli_stmt_execute($stmt); 
 
     mysqli_stmt_close($stmt);
