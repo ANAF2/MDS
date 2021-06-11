@@ -17,6 +17,11 @@
 		$active = '';
 
 		if(isset($_SESSION["userid"])){
+
+			echo '<li class="nav-item">';
+			echo '<a class="nav-link '. $active .'" href="cv-form.php">CV</a>';
+			echo '</li>';
+
 			echo '<li class="nav-item">';
 			echo '<a class="nav-link '. $active .'" href="profile.php">Profile</a>';
 			echo '</li>';

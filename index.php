@@ -30,7 +30,7 @@
 	<h2 style="text-align:center">Let's start your resume</h2>
 
 	<div class="d-flex justify-content-center ">
-		<a class="btn btn-primary" href="">Begin</a>
+		<a class="btn btn-primary" href="includes/begin-inc.php">Begin</a>
 	</div>
 
 <?php
