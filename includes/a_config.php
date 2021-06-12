@@ -8,6 +8,14 @@
 			$CURRENT_PAGE = "Contact"; 
 			$PAGE_TITLE = "Contact Us";
 			break;
+		case "/MDS/cv-form.php":
+			$CURRENT_PAGE = "CV"; 
+			$PAGE_TITLE = "CV";
+			break;
+		case "/MDS/profile.php":
+			$CURRENT_PAGE = "Profile"; 
+			$PAGE_TITLE = "Profile";
+			break;
 		case "/MDS/login.php":
 			$CURRENT_PAGE = "Login"; 
 			$PAGE_TITLE = "Login";

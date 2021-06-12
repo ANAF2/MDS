@@ -261,5 +261,5 @@ function getPathForUser($conn, $userid){
   
       mysqli_stmt_close($stmt);
     }
-  }
+}
   
