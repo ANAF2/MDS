@@ -1,5 +1,7 @@
 <?php
 require_once "db_config.php";
+
+include("functions.php");
 session_start();
 
 $userName = $_POST["username"];
@@ -23,6 +25,16 @@ mysqli_stmt_bind_param($stmt, "sssssi", $userName, $firstName, $lastName, $email
 mysqli_stmt_execute($stmt); 
 
 mysqli_stmt_close($stmt);
+
+$filePath = getPathForUser($conn, $userid);
+$json = readJson($filePath);
+
+$json["firstname"] = $firstName;
+$json["lastname"] = $lastName;
+$json["email"] = $email;
+$json["phone"] = $phone;
+
+createJson($filePath, $json);
 
 header("location: ../profile.php");
 exit();
