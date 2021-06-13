@@ -230,7 +230,7 @@ function updateJson($json, $userid, $filePath, $highSchool, $uni, $desc, $exp, $
 // Reading the json file
 function readJson($filePath){
 
-    $filePath ="../cv_data/" . $filePath;
+    $filePath = "../cv_data/" . $filePath;
   
     $json = file_get_contents($filePath);
   
@@ -262,4 +262,14 @@ function getPathForUser($conn, $userid){
       mysqli_stmt_close($stmt);
     }
 }
+
+// Conversion for the CV form
+function arrayToString($arr){
+    $str = "";
   
+    foreach($arr as $i){
+      $str = $str . $i . "; ";
+    }
+  
+    return $str;
+  }
