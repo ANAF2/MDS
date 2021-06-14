@@ -271,5 +271,18 @@ function arrayToString($arr){
       $str = $str . $i . "; ";
     }
   
+    if($str[-1] == ' ')
+        $str = substr($str, 0, -1);
+
     return $str;
   }
+
+function removeLast($arr){
+    $nr = count($arr) - 1;
+
+    if($arr[$nr][-1] == ';'){
+        $arr[$nr] = substr($arr[$nr], 0, -1);
+    }
+
+    return $arr;
+}

@@ -19,9 +19,16 @@ if(isset($_POST["submit"])){
     $uni = $_POST["uni"];
     $desc = $_POST["desc"];
     $exp = explode("; ", str_replace($rem , '', $_POST["exp"]));
+    $exp = removeLast($exp);
+
     $cert = explode("; ", str_replace($rem , '', $_POST["cert"]));
+    $cert = removeLast($cert);
+
     $projects = explode("; ", str_replace($rem , '', $_POST["projects"]));
+    $projects = removeLast($projects);
+
     $skills = explode("; ", str_replace($rem , '', $_POST["skills"]));
+    $skills = removeLast($skills);
 
     updateJson($data, $userid, $filePath, $highSchool, $uni, $desc, $exp, $cert, $projects, $skills);
 
