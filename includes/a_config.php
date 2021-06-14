@@ -20,6 +20,10 @@
 			$CURRENT_PAGE = "Login"; 
 			$PAGE_TITLE = "Login";
 			break;
+		case "/MDS/jobs.php":
+			$CURRENT_PAGE = "Jobs"; 
+			$PAGE_TITLE = "Jobs";
+			break;
 		default:
 			$CURRENT_PAGE = "Index";
 			$PAGE_TITLE = "Main page";

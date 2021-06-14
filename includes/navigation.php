@@ -21,6 +21,11 @@
 	  	<li class="nav-item">
 	    	<a class="nav-link <?php if ($CURRENT_PAGE == "Profile") {?>active<?php }?>" href="profile.php">Profile</a>
 	  	</li>
+
+		<li class="nav-item">
+	    	<a class="nav-link <?php if ($CURRENT_PAGE == "Jobs") {?>active<?php }?>" href="jobs.php">Jobs</a>
+	  	</li>
+
 	  	<li class="nav-item">
 	   		<a class="nav-link <?php if ($CURRENT_PAGE == "Logout") {?>active<?php }?>" href="includes/logout-inc.php">Logout</a>
 	  	</li>
