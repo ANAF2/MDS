@@ -21,6 +21,7 @@ function sortJobsBasedOnSkills(jobs) {
 function startJobSearching(user, jobs) {
     let jobsList = [];
     for (let i = 0; i < jobs.length; ++i) {
+        jobs[i].skills = jobs[i].skills.split("; ");
         jobsList.push(getCommonSkillsNumber(user, jobs[i]));
     }
     jobsList = sortJobsBasedOnSkills(jobsList);
