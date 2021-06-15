@@ -33,6 +33,10 @@
 		<a class="btn btn-primary" href="includes/begin-inc.php">Begin</a>
 	</div>
 
+	<div>
+
+	</div>
+
 <?php
 	} 
 ?>
