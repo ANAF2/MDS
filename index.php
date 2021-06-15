@@ -3,7 +3,10 @@
 <html>
 <head>
 	<?php include("includes/head-tag-contents.php");?>
-	<link type="text/css" rel="stylesheet" href="./CSS/style.css">
+	<link type="text/css" rel="stylesheet" href="CSS/style.css">
+	<style>
+		<?php include 'CSS/style.css'; ?>
+    </style>
 </head>
 <body>
 
@@ -32,9 +35,20 @@
 	<div class="d-flex justify-content-center ">
 		<a class="btn btn-primary" href="includes/begin-inc.php">Begin</a>
 	</div>
+    
+	<br>
 
-	<div>
+	<h3>Choose a template for your resume</h3>
 
+	<div class="d-flex justify-content-center ">
+		<img  class='image-thumbnail' src='images/template1.png' onclick="window.location='templates/template1.php';">
+       
+       
+	   	<img  class='image-thumbnail' src='images/template2.png' onclick="window.location='templates/template2.php';">
+ 
+  
+	   	<img  class='image-thumbnail' src='images/template3.png' onclick="window.location='templates/template3.php';">       
+ 
 	</div>
 
 <?php

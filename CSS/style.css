@@ -3,3 +3,19 @@
     height:auto;
     display:inline-block;
 }
+
+.image-thumbnail {
+       
+    width: 15em;
+    height: 15em;
+    padding: 5px;
+    border: 2px solid #41444a;
+    margin: 5px;
+    background-color: #d3d9e3;
+    transition-duration: 0.5s;
+}
+
+.image-thumbnail:hover {
+    filter:brightness(75%);
+    cursor: pointer;
+}

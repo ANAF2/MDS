@@ -199,7 +199,7 @@ if(count($projects) != 0){
 
 	for($i = 0; $i < count($projects); $i++){
 		$pdf->SetX(15);
-		$pdf->SetFont('Arial','',12);
+		$pdf->SetFont('Arial','B',12);
 		$pdf->Cell($width-30,8,"-> ".$projects[$i],0,1);
 	}
 
@@ -212,17 +212,17 @@ if(count($projects) != 0){
 //Skills + Limbi
 
 $pdf->SetX(15);
-$pdf->SetFont('Arial','B',18);
+$pdf->SetFont('Courier','B',18);
 $pdf->Cell(($width-30)/2,15,"Skills",0,0);
-$pdf->Cell(($width-30)/2,15,"Languages",0,1);
+$pdf->Cell(($width-30)/2,15," ",0,1);
 
 for ($i = 0; $i < count($skills); $i++) {
 	$pdf->SetX(15);
-	$pdf->SetFont('Arial','',12);
+	$pdf->SetFont('Courier','B',12);
 	if($i < count($limbi[0])){
 		$pdf->Cell(($width-30)/2,8,"-> ".$skills[$i],0,0);
-		$pdf->Cell(($width-30)/4,8,$limbi[0][$i],0,0);
-		$pdf->Cell(($width-30)/4,8,"-> ".$limbi[1][$i],0,1);
+	    $pdf->Cell(($width-30)/4,8,"",0,0);
+		$pdf->Cell(($width-30)/4,8,"",0,1);
 	}else{
 		$pdf->Cell(($width-30)/2,8,"-> ".$skills[$i],0,1);
 	}

@@ -21,7 +21,7 @@
     $json = file_get_contents($filePath);
   
     $data = json_decode($json, true);
-	$skills = $data["Skills"];
+	//$skills = $data["Skills"];
 	
 
 	$result = getJobs($conn);
@@ -37,7 +37,12 @@
 <script>
 	var js_data = '<?php echo json_encode($arr[15]); ?>';
 	var js_obj_data = JSON.parse(js_data );
+
+	var js_data = '<?php echo json_encode($data); ?>';
+	var userData = JSON.parse(js_data);
+	
 	console.log(js_obj_data);
+	console.log(userData);
 </script>
 <div class="container" id="main-content">
 
