@@ -42,17 +42,18 @@
 	var js_data = '<?php echo json_encode($skills); ?>';
 	var userData = JSON.parse(js_data);
 	
-	console.log(startJobSearching(userData, jobs));
+	const sorted = startJobSearching(userData, jobs);
 
-	//console.log(jobs);
+	console.log(jobs);
 	//console.log(userData);
-
 
 </script>
 
 <div class="container" id="main-content">
 
-	
+<script>
+	document.getElementById("main-content").innerHTML = showJobs(sorted);
+</script>
 
 </div>
 

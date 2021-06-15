@@ -29,15 +29,21 @@ function startJobSearching(user, jobs) {
 }
 
 function showJobs(jobs) {
-    let domAppend = '';
+    let domAppend = '<hr>';
     for (let i = 0; i < jobs.length; ++i) {
-        const job = jobs[i];
-        const domEmployer = "Employer: " + job.employer + "<br>";
-        const domTitle = "Title: " + job.job_title + "<br>";
-        const domDescription = "Description: " + job.description; + "<br>";
-        const domSkills = "Skills: " + job.skills + "<br>";
-        const domMatchingScore = "Matching Score: " + job.score + "<br>";
-        domAppend += "<div>" + domEmployer + domTitle + domDescription + domSkills + domMatchingScore + "</div>";
+        const job = jobs[i].job;
+        const score = jobs[i].score;
+        let skills = "";
+        for (let j = 0; j < job.skills.length; ++j) {
+            skills += job.skills[j] + " ";
+        }
+        const domEmployer = "<p><b>Employer:</b> " + job.employer + "</p>";
+        const domTitle = "<p><b>Title:</b> " + job.job_title + "</p>";
+        const domDescription = "<p><b>Description:</b> " + job.description; + "</p>";
+        const domSkills = "<p><b>Skills:</b> " + skills + "</p>";
+        const domMatchingScore = "<p><b>Matching Score:</b> " + score + "</p>";
+       
+        domAppend += "<div class='job-listing'> " + domEmployer + domTitle + domDescription + domSkills + domMatchingScore + "<hr> </div>";
     }
-    document.getElementById("main-content").innerHTML = domAppend;
+    return domAppend;
 }

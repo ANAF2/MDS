@@ -20,6 +20,11 @@
     cursor: pointer;
 }
 
-.main-content{
+#main-content{
     
+}
+
+.job-listing{
+    border: 2px solid black;
+    margin: 5px;
 }
