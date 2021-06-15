@@ -30,7 +30,7 @@ Tips & tricks for a better CV will also be waiting for you on our website. These
 10. As a user I want to create a CV with ease
 
 
-## Demo
+## Demo Not yet uploaded
 
 See how the application works [here](https://www.youtube.com/). 
 
@@ -39,8 +39,5 @@ See how the application works [here](https://www.youtube.com/).
 
 ## Bug Reporting 
 
-TBC
-
-## Testing Automation
-
-TBC
+When data from the input fields: work experience, projects, skills and certifications from cv-form.php is written in .json files, unwanted ";" are found in that data.
+[here](https://github.com/ANAF2/MDS/issues/8)
