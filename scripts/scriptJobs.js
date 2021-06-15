@@ -27,3 +27,17 @@ function startJobSearching(user, jobs) {
     jobsList = sortJobsBasedOnSkills(jobsList);
     return jobsList;
 }
+
+function showJobs(jobs) {
+    let domAppend = '';
+    for (let i = 0; i < jobs.length; ++i) {
+        const job = jobs[i];
+        const domEmployer = "Employer: " + job.employer + "<br>";
+        const domTitle = "Title: " + job.job_title + "<br>";
+        const domDescription = "Description: " + job.description; + "<br>";
+        const domSkills = "Skills: " + job.skills + "<br>";
+        const domMatchingScore = "Matching Score: " + job.score + "<br>";
+        domAppend += "<div>" + domEmployer + domTitle + domDescription + domSkills + domMatchingScore + "</div>";
+    }
+    document.getElementById("main-content").innerHTML = domAppend;
+}
