@@ -209,7 +209,7 @@ function createJson($filePath, $obj){
 }
 
 // Updating data in json file
-function updateJson($json, $userid, $filePath, $highSchool, $uni, $desc, $exp, $cert, $projects, $skills){
+function updateJson($json, $userid, $filePath, $highSchool, $uni, $desc, $exp, $cert, $projects, $skills, $adress){
     $json["High School"] = $highSchool;
   
     $json["University"] = $uni;
@@ -223,6 +223,8 @@ function updateJson($json, $userid, $filePath, $highSchool, $uni, $desc, $exp, $
     $json["Projects"] = $projects;
   
     $json["Skills"] = $skills;
+
+    $json["Adress"]  = $adress;
   
     createJson($filePath, $json);
 }

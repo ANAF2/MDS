@@ -30,7 +30,9 @@ if(isset($_POST["submit"])){
     $skills = explode("; ", str_replace($rem , '', $_POST["skills"]));
     $skills = removeLast($skills);
 
-    updateJson($data, $userid, $filePath, $highSchool, $uni, $desc, $exp, $cert, $projects, $skills);
+    $adress = $_POST["adress"];
+
+    updateJson($data, $userid, $filePath, $highSchool, $uni, $desc, $exp, $cert, $projects, $skills, $adress);
 
     header("location: ../index.php");
     exit();

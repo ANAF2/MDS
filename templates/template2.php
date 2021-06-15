@@ -55,7 +55,7 @@ $projects = $data["Projects"];
 $certificate = $data["Certifications"];
 $skills  =$data["Skills"];
 
-//$address = $data["address"];
+$address = $data["Adress"];
 
 
 $pdf = new FPDF('P','mm','A4');

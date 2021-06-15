@@ -29,6 +29,7 @@
     $cert = '';
     $projects = '';
     $skills = '';
+    $adress = '';
   
     if(array_key_exists("High School", $json)){
       $highSchool = $json["High School"];
@@ -38,6 +39,7 @@
       $cert = arrayToString($json["Certifications"]);
       $projects = arrayToString($json["Projects"]);
       $skills = arrayToString($json["Skills"]);
+      $adress = $json["Adress"];
     }
   ?>
 
@@ -91,6 +93,13 @@
         <label>Skills(devide items with ";")</label>
         <br>
         <input type="text" name="skills" class="form-control" placeholder="Skills" required value = '<?php echo $skills; ?>'>
+
+      </div> 
+
+      <div class="form-group ">
+        <label>Adress</label>
+        <br>
+        <input type="text" name="adress" class="form-control" placeholder="Adress" required value = '<?php echo $adress; ?>'>
 
       </div> 
 
