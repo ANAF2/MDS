@@ -30,9 +30,9 @@ Tips & tricks for a better CV will also be waiting for you on our website. These
 10. As a user I want to create a CV with ease
 
 
-## Demo Not yet uploaded
+## Demo
 
-See how the application works [here](https://www.youtube.com/). 
+See how the application works [here](https://youtu.be/IOQLh_iuB84). 
 
 ## UML Use Case Diagram
 ![alt text](https://github.com/mbxyz/1/blob/main/Cv%20Designer%20copy.png)
